@@ -10,4 +10,13 @@
     padding: 10px;
     border:1px solid  blue;
     border-radius: 5px;
+    
+}
+.input-box-reg
+{
+  margin-left: 10px;
+}
+.main-container-home
+{
+    background:linear-gradient(180deg,#8f79f5,#4a2ec7);
 }

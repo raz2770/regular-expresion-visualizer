@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'; 
 import Home from './pages/index'; 
-import About from './pages/about'; 
+import About from './pages/about/About.jsx'; 
 import "./styles.css";
 import Navbar from "./componenets/navbar/Navbar";
 
@@ -14,7 +14,7 @@ import Navbar from "./componenets/navbar/Navbar";
             <Home />
           </Route>
           <Route path="/about">
-            <About />
+            <About/>
           </Route>
         </Switch>
       </Router> 
