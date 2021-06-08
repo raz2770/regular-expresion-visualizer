@@ -9,6 +9,7 @@
   "dependencies": {
     "dagre": "^0.8.5",
     "react": "17.0.0",
+    "react-bootstrap": "^1.6.1",
     "react-dom": "17.0.0",
     "react-flow-renderer": "8.0.0",
     "react-icons": "^4.2.0",

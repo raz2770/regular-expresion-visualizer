@@ -1,0 +1,12 @@
+.heading
+{
+    /* border: 2px solid  linear-gradient(180deg,#8f79f5,#4a2ec7); */
+    border: 2px solid #8f79f5;
+    color:white;
+    border-radius: 10px;
+}
+.disc
+{
+    font-size:18px;
+    color:bisque;
+}
