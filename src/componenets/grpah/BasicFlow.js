@@ -545,7 +545,7 @@ const BasicFlow = (props) => {
   const dagreGraph = new dagre.graphlib.Graph();
   dagreGraph.setDefaultEdgeLabel(() => ({}));
   console.log("raj");
-  const getLayoutedElements = (elements, direction = "TB") => {
+  const getLayoutedElements = (elements, direction = "LR") => {
     const isHorizontal = direction === "LR";
     dagreGraph.setGraph({ rankdir: direction });
 
@@ -578,9 +578,15 @@ const BasicFlow = (props) => {
     });
   };
   const layoutedElements = getLayoutedElements(initialElements);
+  const style = {
+    background: '#8f79f5',
+    width: '100%',
+    height: 500,
+  };
+  
   return (
-    <div style={{ height: "100vw", padding: "20px" }}>
-      <ReactFlow elements={layoutedElements} />
+    <div >
+      <ReactFlow elements={layoutedElements}  style={style} />
     </div>
   );
 };

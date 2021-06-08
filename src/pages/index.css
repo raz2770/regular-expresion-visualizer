@@ -1,0 +1,13 @@
+.graph-box
+{   
+    padding:10px;
+    border:1px solid rebeccapurple;
+    border-radius: 5px;
+
+}
+.input-box
+{   
+    padding: 10px;
+    border:1px solid  blue;
+    border-radius: 5px;
+}

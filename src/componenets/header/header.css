@@ -9,4 +9,13 @@
 {
     font-size:18px;
     color:bisque;
+    padding-top: 20px;
+}
+.horizontal-line
+{   
+    color: white; 
+    border: none; 
+    margin: 0px; 
+    height: 1px; 
+    background-color: white; 
 }
