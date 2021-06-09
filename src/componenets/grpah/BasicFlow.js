@@ -63,12 +63,14 @@ const BasicFlow = (props) => {
           op.pop();
           break;
         default:
-          while (op.length !== 0) {
+          while (op.length !== 0) 
+          {
             c = op[op.length - 1];
             if (priority(c) >= priority(regexp[i])) {
               postfix += op[op.length - 1];
               op.pop();
-            } else break;
+            } 
+            else break;
           }
           op.push(regexp[i]);
       }
@@ -476,12 +478,12 @@ const BasicFlow = (props) => {
   const res = getDfa(props.regex);
   console.log(res);
   const dfa1 = res[1];
+  const starting_state=res[0];
   let initialElements = [];
   let addNode = function (dfa) {
     let count = 0;
     dfa.forEach((el) => {
       let i = count;
-
       let node1 = {
         id: `${i}`,
         data: { label: "q" + count },
@@ -495,6 +497,19 @@ const BasicFlow = (props) => {
         },
         position: position
       };
+      if(count===starting_state)
+      {  
+        node1.style = {
+          border: "1px solid yellow",
+          paddingTop: 2,
+          paddingLeft:1,
+          width: 45,
+          height: 40,
+          borderRadius: 20,
+          fontSize: 8
+        };
+        node1.data = { label: "q" + count + " start_state" };
+      }
       if (el.final === true) {
         node1.style = {
           border: "1px solid green",

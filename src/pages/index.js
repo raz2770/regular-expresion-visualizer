@@ -12,7 +12,6 @@ const Home = () => {
     const handleSubmitRegex = (evt) => {
         evt.preventDefault();
         setdisplayQuestions(true);
-        alert(`Submitting Name ${regex}`)
     };
     const handleSubmitString = (evt) => {
         evt.preventDefault();
@@ -20,35 +19,38 @@ const Home = () => {
         if (displayQuestions) 
         {
         setResult((
-            <p style={{background:"white",borderRadius:"5px", padding:"5px"}}>
+           
                <Checker regex={regex} string={string}/>
-            </p>
             ))
         }
         else
         {
             setResult((
-                <div style={{background:"white",borderRadius:"5px", padding:"5px"}}>
+                <div style={{background:"white",borderRadius:"5px", padding:"5px" ,width:"40%" ,margin:"auto",color:"yellow"}}>
                    <p>first convert regular expresssion to dfa</p>
                 </div>
                 )) 
         }
-        alert(`Submitting Name ${string}`)
+ 
     };
-    let questions="";
+    let graph="";
     if (displayQuestions) 
     {
-       questions = (
+       graph = (
         <div>
+            <div style={{background:"white",borderRadius:"5px", padding:"5px" ,width:"40%" ,margin:"auto",color:""}}>
+                   <p>note:-if there is no edge for any character means its self state</p>
+                </div>
             <BasicFlow regex={regex}/>
         </div>
         )
    }
    else
    {
-    questions = (
-        <div>
-            raj
+     graph = (
+        <div className="text-center">
+            <p>here graph will draw</p>
+            
         </div>
         )
    }
@@ -60,7 +62,7 @@ const Home = () => {
        
             <div className="row ">
                 <div className="col-12 col-md-7">
-                    <div className="p-3" >
+                    <div className="p-3">
                          <div className="input-box input-box-reg bg-white">
                             <p>Enter the regular expression </p>
                             <p>Note:- regex expression should be fromat like ex.(110+11),1110*11+11,(11+110*11*+11)</p>
@@ -89,8 +91,8 @@ const Home = () => {
                     <p>Enter the string to check if it belongs to the given regular expression</p>
                     <p>Note:- string should be fromat like ex. 11011,11101111,1111100111</p>
                     <form onSubmit={handleSubmitString}>
-                            <label>
-                                Regular Expression:
+                            <label >
+                                String:
                             </label>
                             <br></br>
                             <input
@@ -101,7 +103,7 @@ const Home = () => {
                         
                                 />
                                 <br></br>
-                            <input type="submit" value="Check" />
+                            <input  type="submit" value="Check" />
                         </form>
                         
                     </div>
@@ -114,7 +116,7 @@ const Home = () => {
            
               <div className="p-3">
                   <div className="graph-box">
-                   {questions}
+                   {graph}
                  </div>
             </div>
       

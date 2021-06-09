@@ -493,11 +493,16 @@ nfa[final_state].f=1;
     let result;
     if(isaccepted)
     {
-        result=<p>This string accepted by this regular expression</p>    
+        result=(<div style={{background:"white",borderRadius:"5px", padding:"5px" ,width:"40%" ,margin:"auto",color:"red"}}>
+                <p>This string accepted by this regular expression</p>
+                </div>);
     }
     else
     {
-        result=<p>This string is not accepted by this regular expression</p> 
+        result=(<div style={{background:"white",borderRadius:"5px", padding:"5px" ,width:"40%" ,margin:"auto",color:"red"}}>
+        <p>This string is not accepted by this regular expression</p>
+        </div>);
+        
     }
 
       
