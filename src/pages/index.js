@@ -13,6 +13,7 @@ const Home = () => {
         evt.preventDefault();
         setdisplayQuestions(true);
     };
+    console.log(regex);
     const handleSubmitString = (evt) => {
         evt.preventDefault();
         setdisplayString(true);

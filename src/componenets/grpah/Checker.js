@@ -499,7 +499,7 @@ nfa[final_state].f=1;
     }
     else
     {
-        result=(<div style={{background:"white",borderRadius:"5px", padding:"5px" ,width:"40%" ,margin:"auto",color:"red"}}>
+        result=(<div style={{background:"white",borderRadius:"5px", padding:"5px" ,width:"40%" ,margin:"auto",color:"green"}}>
         <p>This string is not accepted by this regular expression</p>
         </div>);
         
